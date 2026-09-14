@@ -3,8 +3,8 @@
 For this week's activity, I worked on using explainable AI techniques to defend a certain position. In this case, I was assigned to defend Case 3: Recidivism Prediction.
 
 ## Results
-I used LIME and SHAP to explain Malik's prediction. Both methods showed that Malik's limited prior convictions and lack of juvenile offenses were important factors supporting the model's low-risk prediction.
+I used LIME and SHAP to explain Malik's prediction. The corrected model predicted no recidivism with a probability of about 0.391, compared with a baseline probability of about 0.449.
 
-SHAP showed that Malik's predicted recidivism probability decreased from a baseline of 0.457 to 0.099. While LIME and SHAP use different approaches and may produce different feature weights, their general agreement strengthens the defense argument that the prediction is explainable.
+SHAP showed that Malik's limited prior convictions and lack of juvenile offenses lowered the predicted risk. The felony charge, age, and encoded race category increased the prediction somewhat. LIME showed the same general pattern using a local approximation around Malik's profile.
 
-However, these methods explain the model's behavior and do not prove causation or fairness, so additional fairness analysis would be necessary.
+The two methods use different approaches and may produce different feature weights. Their agreement supports the defense argument that the model's prediction follows identifiable learned patterns. However, the model has limited predictive performance, and these explanation methods describe model behavior rather than proving causation, accuracy, or fairness. Additional fairness analysis would be necessary.
